@@ -6,7 +6,7 @@ Many different talents are needed to protect a Solana validator node from extern
 HARDWARE SECURITY
 
 
-Hardware must be locked if possible in a cage in the datacenter and nobody should be allowed near your server but you. You must not type in the password to your server at the console unless you put a coat over your head and keayboard as most DC's have video cameras inside the server rooms.
+Hardware must be locked if possible in a cage in the datacenter and nobody should be allowed near your server but you. You must not type in the password to your server at the console unless you put a coat over your head and keyboard as most DC's have video cameras inside the server rooms.
 
 
 SOFTWARE SECURITY
