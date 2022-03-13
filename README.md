@@ -21,6 +21,8 @@ Best practice to remote access your Linux server is with a SSH key and with SSH 
 You must then restart the sshd daemon by running the command as follows:
 
     systemctl restart ssh
+    
+Server user accounts must also be screwed down very tightly by various techniques like turning off 'Other' rights in directories and disabling login for the Sol user or whatever user you have assigned to running the 'solana-validator' binary software. 
 
 SOFTWARE SECURITY
 
