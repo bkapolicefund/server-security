@@ -59,7 +59,7 @@ Open source can still be a liablility to install on your server. Never install u
 
 Basically the only reason that you really need extra security in a Solana validator is to keep your validator and voting secret keys from being stolen. All the security procedures around hardware and software that are recommended basically are to prevent this secret key theft. Once these keys are copied by an attacker you can no longer be a solana validator.
 
-The most important thing to do daily is to keep an eye on the balance of your Voting Key as this will accumulate profits. You must therefore withdraw all profits as often as possible or if your server is hacked you will loose the balance left in the voting account. However if you change the withdraw key to a third offserver key, then you are protected from this theft. However you will then not be able to ever be a validator using the validator keys as the hacker will have a copy of them now too.
+The most important thing to do daily is to keep an eye on the balance of your Voting Key as this will accumulate profits. You must therefore withdraw all profits as often as possible or if your server is hacked you will loose the balance left in the voting account. However if you change the withdraw key to a third offserver key, then you are protected from this theft. However you will then not be able to ever be a validator using the validator keys as the hacker will have a copy of them now too. You can regenerate new validator and vote keys only if you have changed your withdraw key to an offserver location supposedly but that is going to cause some serious problems with your investors who staked to your node. Your reputation will be damaged and badly.
 
 PENATRATION TESTING
 
