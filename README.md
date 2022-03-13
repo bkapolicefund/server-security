@@ -22,6 +22,16 @@ You must then restart the sshd daemon by running the command as follows:
 
     systemctl restart ssh
     
+However an even better way to help secure your node is to hide the SSH login port. Modern SSH keys are so long that it would take a Japanese supercomputer 1000's of years to crack the key but you can hide the port if you like.
+
+WARNING: IT IS DANGEROUS TO CHANGE SSH PORTS. You may inadvertantly move the SSH port to a port in use or even worse, a port which is intermittantly in use, in which case you may be jammed by the other port from logging into your server. If this happens there is no way to recover except to remote login to your server console and if you have no HTTPS remote login to the console, then you will have to drive to the datacenter and hand login to the console to fix this issue. But if you are confident as well as paranoid then just add one more line in the same /etc/ssh/sshd_config file as follows:
+
+    port 31234    
+    
+Its best to use a port above 1000 and be sure its also above the Solana portrange too. Use 30000 or higher ports. DO NOT FORGET TO OPEN THE FIREWALL PORT AT SAME PORT NUMBER AS THE SSH PORT LIKE SO:
+
+    ufw allow 31234
+    
 Server user accounts must also be screwed down very tightly by various techniques like turning off 'Other' rights in directories and disabling login for the Sol user or whatever user you have assigned to running the 'solana-validator' binary software. 
 
 Go to the root directory for your 'solana-validator' user like /home/sol and apply the command any time that you add files to this set of directories as follows:
