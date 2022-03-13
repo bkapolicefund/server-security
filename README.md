@@ -24,6 +24,10 @@ You must then restart the sshd daemon by running the command as follows:
     
 Server user accounts must also be screwed down very tightly by various techniques like turning off 'Other' rights in directories and disabling login for the Sol user or whatever user you have assigned to running the 'solana-validator' binary software. 
 
+Go to the root directory for your 'solana-validator' user like /home/sol and apply the command any time that you add files to this set of directories as follows:
+
+    chmod -R a=,ug=rw /home/sol
+
 SOFTWARE SECURITY
 
 There are many good reasons that the Solana Foundation does not want validators to run externally produced binaries on their validator's nodes. A recent example of this was a 'special binary' that was sold to many validators for only 1 SOL. Apparently this was an attacker of the network and some nodes were then hacked. Never ever run any binary from anyone or any company on your validator node that is not open source or you can get a trojan software that will steal your secret Solana validator keys and send them over the Internet to the attacker's server. Once this happens you have lost your node permanently and any wallet balance or SOL balance on these node keys.
