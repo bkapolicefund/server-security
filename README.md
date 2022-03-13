@@ -31,6 +31,15 @@ Go to the root directory for your 'solana-validator' user like /home/sol and app
 Shut down login rights for the 'solana-validator' user. If for example this username is 'sol' then you would turn off this user's login by the command as follows:
 
     usermod --lock sol
+    
+
+The UFW Firewall must be installed and used at all times. The minute that you have your server online issue these commands immediatly at the console:
+
+    ufw allow ssh
+    ufw enable
+       
+Port Security is vital to defense against attackers. Add the other ports needed by Solana to be allowed into the node. Pay close attention to the port 8899 for example and see that it is blocked by the firewall if necessary. See the latest firewall setting recommendations from the solana docs.
+
 
 SOFTWARE SECURITY
 
