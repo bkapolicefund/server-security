@@ -17,6 +17,10 @@ Particularly critical is to never remotely log into your server console without 
 Best practice to remote access your Linux server is with a SSH key and with SSH set on the server to not allow the ROOT user to login with a password. You must set this in the server's /etc/ssh/sshd_config file by adding the line at the bottom of the file as follows:
 
     PermitRootLogin prohibit-password
+    
+You must then restart the sshd daemon by running the command as follows:
+
+    systemctl restart ssh
 
 SOFTWARE SECURITY
 
