@@ -8,6 +8,11 @@ HARDWARE SECURITY
 
 Hardware must be locked if possible in a cage in the datacenter and nobody should be allowed near your server but you. You must not type in the password to your server at the console unless you put a coat over your head and keyboard as most DC's have video cameras inside the server rooms.
 
+Particularly critical is to never remotely log into your server console without using HTTPS to connect. Do not use remote software that only has HTTP connection ever. 
+
+Best practice to remote access your Linux server is with a SSH key and with SSH set on the server to not allow the ROOT user to login with a password. You must set this in the server's /etc/ssh/sshd_config file by adding the line at the bottom of the file as follows:
+
+    PermitRootLogin prohibit-password
 
 SOFTWARE SECURITY
 
