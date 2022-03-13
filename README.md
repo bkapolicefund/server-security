@@ -51,11 +51,15 @@ The UFW Firewall must be installed and used at all times. The minute that you ha
 Port Security is vital to defense against attackers. Add the other ports needed by Solana to be allowed into the node. Pay close attention to the port 8899 for example and see that it is blocked by the firewall if necessary. See the latest firewall setting recommendations from the solana docs.
 
 
-SOFTWARE SECURITY
+SOFTWARE SECURITY & VALIDATOR SECRET KEY SECURITY
 
 There are many good reasons that the Solana Foundation does not want validators to run externally produced binaries on their validator's nodes. A recent example of this was a 'special binary' that was sold to many validators for only 1 SOL. Apparently this was an attacker of the network and some nodes were then hacked. Never ever run any binary from anyone or any company on your validator node that is not open source or you can get a trojan software that will steal your secret Solana validator keys and send them over the Internet to the attacker's server. Once this happens you have lost your node permanently and any wallet balance or SOL balance on these node keys.
 
 Open source can still be a liablility to install on your server. Never install unneeded software on your node.
+
+Basically the only reason that you really need extra security in a Solana validator is to keep your validator and voting secret keys from being stolen. All the security procedures around hardware and software that are recommended basically are to prevent this secret key theft. Once these keys are copied by an attacker you can no longer be a solana validator.
+
+The most important thing to do daily is to keep an eye on the balance of your Voting Key as this will accumulate profits. You must therefore withdraw all profits as often as possible or if your server is hacked you will loose the balance left in the voting account. However if you change the withdraw key to a third offserver key, then you are protected from this theft. However you will then not be able to ever be a validator using the validator keys as the hacker will have a copy of them now too.
 
 PENATRATION TESTING
 
