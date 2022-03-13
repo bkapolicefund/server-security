@@ -27,6 +27,10 @@ Server user accounts must also be screwed down very tightly by various technique
 Go to the root directory for your 'solana-validator' user like /home/sol and apply the command any time that you add files to this set of directories as follows:
 
     chmod -R a=,ug=rw /home/sol
+    
+Shut down login rights for the 'solana-validator' user. If for example this username is 'sol' then you would turn off this user's login by the command as follows:
+
+    usermod --lock sol
 
 SOFTWARE SECURITY
 
